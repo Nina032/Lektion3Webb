@@ -28,13 +28,13 @@ namespace Lektion3Web
             services.AddControllersWithViews();
             services.AddMemoryCache();
 
-            string cnnString = Configuration.GetConnectionString("Lektion3DBContext");
-            var docClient = new CosmosClient(Configuration.GetConnectionString("CosmosDB"));
+            //string cnnString = Configuration.GetConnectionString("Lektion3DBContext");
+            //var docClient = new CosmosClient(Configuration.GetConnectionString("CosmosDB"));
 
-            services.AddDbContext<Models.Lektion3DBContext>((opts) => {
-                opts.UseSqlServer(cnnString);
-            });
-            services.AddSingleton<CosmosClient>(docClient);
+            //services.AddDbContext<Models.Lektion3DBContext>((opts) => {
+            //    opts.UseSqlServer(cnnString);
+            //});
+            //services.AddSingleton<CosmosClient>(docClient);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
